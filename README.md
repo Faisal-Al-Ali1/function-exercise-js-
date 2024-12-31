@@ -44,4 +44,4 @@ By completing these exercises, learners will strengthen their ability to use fun
 
 ## Live URL
 
-[Click Here](#)
+[Click Here](https://faisal-al-ali1.github.io/function-exercise-js-/)
