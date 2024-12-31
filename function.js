@@ -27,25 +27,53 @@ odd_even();
 
 // Q3
 
-function alphabetical(str) {
-  const string = str.toLowerCase();
-  const sortedStr = string.split("").sort().join("");
-  console.log(sortedStr);
+function alphabit_order(str) {
+  let fstr = str.toLowerCase();
+  let result = "";
+
+  for (i = 0; i < str.length; i++) {
+    let min = fstr[0];
+    for (j = 1; j < fstr.length; j++) {
+      if (min > fstr[j]) {
+        min = fstr[j];
+      }
+    }
+    result += min;
+    fstr = fstr.replace(min, "");
+  }
+  return console.log(result);
 }
-alphabetical("Orange");
+alphabit_order("Orange");
 
 // Q4
 
+function dashInsert(input) {
+  let inputString = input.toString();
+  let result = [];
 
+  for (let i = 0; i < inputString.length; i++) {
+    result.push(inputString[i]);
 
+    if (
+      i < inputString.length - 1 &&
+      inputString[i] % 2 === 0 &&
+      inputString[i + 1] % 2 === 0
+    ) {
+      result.push("-");
+    }
+  }
+  return result.join("");
+}
 
-
-
-
+let input = prompt("Enter a number:");
+let output = dashInsert(input);
+console.log(output);
 
 // Q5
 
 function Agechecker(age) {
-  age >= 18 ? console.log("The user is Adult") : console.log("The user is Minor");
+  age >= 18
+    ? console.log("The user is Adult")
+    : console.log("The user is Minor");
 }
 Agechecker(23);
